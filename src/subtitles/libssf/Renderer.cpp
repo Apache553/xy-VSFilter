@@ -25,6 +25,8 @@
 #include "Renderer.h"
 #include "Arabic.h"
 
+#include "createfont_hook.h"
+
 namespace ssf
 {
 	template <class T>
@@ -763,7 +765,7 @@ namespace ssf
 		}
 
 		HFONT hFont;
-		hFont = CreateFontIndirect(&lf);
+		hFont = HookedCreateFontIndirect(&lf);
 		if (hFont)
 		{
 			ASSERT(0);

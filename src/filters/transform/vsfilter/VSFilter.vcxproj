@@ -48,10 +48,17 @@
   <ItemDefinitionGroup>
     <Link>
       <ModuleDefinitionFile>VSFilter.def</ModuleDefinitionFile>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">createfont_hook.lib;delayimp.lib;strmbaseR.lib;dsutilR.lib;subtitlesR.lib;subpicR.lib;basevideofilterR.lib;libssfR.lib;log4cplus_staticRU.lib;KasumiR.lib;systemR.lib;unrarR.lib;winmm.lib;dwmapi.lib;Mfuuid.lib</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Release|x64'">createfont_hook.lib;delayimp.lib;strmbaseR.lib;dsutilR.lib;subtitlesR.lib;subpicR.lib;basevideofilterR.lib;libssfR.lib;log4cplus_staticRU.lib;KasumiR.lib;systemR.lib;unrarR.lib;winmm.lib;dwmapi.lib;Mfuuid.lib</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">createfont_hook.lib;strmbaseD.lib;dsutilD.lib;subtitlesD.lib;subpicD.lib;basevideofilterD.lib;libssfD.lib;log4cplus_staticDU.lib;KasumiD.lib;systemD.lib;unrarD.lib;dwmapi.lib;Mfuuid.lib</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">createfont_hook.lib;strmbaseD.lib;dsutilD.lib;subtitlesD.lib;subpicD.lib;basevideofilterD.lib;libssfD.lib;log4cplus_staticDU.lib;KasumiD.lib;systemD.lib;unrarD.lib;dwmapi.lib;Mfuuid.lib</AdditionalDependencies>
     </Link>
     <ResourceCompile>
       <PreprocessorDefinitions>_AFXDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
+    <ClCompile>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">EditAndContinue</DebugInformationFormat>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ResourceCompile Include="VSFilter.rc" />

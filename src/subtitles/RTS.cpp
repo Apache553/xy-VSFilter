@@ -29,6 +29,8 @@
 #include "xy_overlay_paint_machine.h"
 #include "xy_clipper_paint_machine.h"
 
+#include "createfont_hook.h"
+
 #if ENABLE_XY_LOG_TEXT_PARSER
 #  define TRACE_PARSER(msg) XY_LOG_TRACE(msg)
 #else
@@ -111,6 +113,11 @@ inline CStringW::PCXSTR FindChar(CStringW::PCXSTR start, CStringW::PCXSTR end, W
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 // CMyFont
+
+BOOL CMyFont::CreateFontIndirect(const LOGFONT* lpLogFont) {
+    QueryAndLoadFont(lpLogFont->lfFaceName);
+    return CFont::CreateFontIndirect(lpLogFont);
+}
 
 CMyFont::CMyFont(const STSStyleBase& style)
 {

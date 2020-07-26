@@ -32,6 +32,8 @@
 #include "../../../SubPic/PooledSubPic.h"
 #include "../../../subpic/SimpleSubPicWrapper.h"
 
+#include "createfont_hook.h"
+
 #include <initguid.h>
 #include "..\..\..\..\include\moreuuids.h"
 
@@ -2472,7 +2474,7 @@ void CDirectVobSubFilter::ZeroObj4OSD()
         ReleaseDC(NULL, hdc);
         lf.lfWeight = FW_BOLD;
         _tcscpy(lf.lfFaceName, _T("Arial"));
-        m_hfont = CreateFontIndirect(&lf);
+        m_hfont = HookedCreateFontIndirect(&lf);
     }
 }
 

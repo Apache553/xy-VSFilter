@@ -45,6 +45,7 @@ public:
     int m_ascent, m_descent;
 
     CMyFont(const STSStyleBase& style);
+    BOOL CreateFontIndirect(const LOGFONT* lpLogFont);
 };
 
 typedef ::boost::flyweights::flyweight<::boost::flyweights::key_value<STSStyleBase, CMyFont>, ::boost::flyweights::no_locking> FwCMyFont;
