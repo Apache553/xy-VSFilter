@@ -16,7 +16,7 @@
 struct FontPathRequest {
 	volatile uint32_t done;
 	volatile uint32_t length;
-	volatile wchar_t data[0];
+	volatile wchar_t data[1];
 };
 #pragma pack(pop)
 

@@ -75,24 +75,28 @@
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\lib_$(VisualStudioVersion)\$(PlatformName)\</OutDir>
     <IntDir>$(SolutionDir)bin\obj_$(VisualStudioVersion)\$(Configuration)_$(PlatformName)\$(ProjectName)\</IntDir>
+    <TargetName>createfont_hookD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\lib_$(VisualStudioVersion)\$(PlatformName)\</OutDir>
     <IntDir>$(SolutionDir)bin\obj_$(VisualStudioVersion)\$(Configuration)_$(PlatformName)\$(ProjectName)\</IntDir>
+    <TargetName>createfont_hookR</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\lib_$(VisualStudioVersion)\$(PlatformName)\</OutDir>
     <IntDir>$(SolutionDir)bin\obj_$(VisualStudioVersion)\$(Configuration)_$(PlatformName)\$(ProjectName)\</IntDir>
+    <TargetName>createfont_hookD</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(SolutionDir)include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)bin\lib_$(VisualStudioVersion)\$(PlatformName)\</OutDir>
     <IntDir>$(SolutionDir)bin\obj_$(VisualStudioVersion)\$(Configuration)_$(PlatformName)\$(ProjectName)\</IntDir>
+    <TargetName>createfont_hookR</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -167,7 +171,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\createfont_hook.h" />
+    <ClInclude Include="..\..\include\createfont_hook.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>
